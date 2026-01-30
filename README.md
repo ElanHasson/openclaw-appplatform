@@ -6,12 +6,12 @@ Deploy [Moltbot](https://github.com/moltbot/moltbot) - a multi-channel AI messag
 
 ## Quick Start: Choose Your Stage
 
-| Stage | What You Get | Cost | Access Method |
-|-------|--------------|------|---------------|
-| **1. CLI Only** | Gateway + CLI | ~$10/mo | `doctl apps console` |
-| **2. + Web UI + ngrok** | Control UI + Public URL | ~$10/mo | ngrok URL |
-| **3. + Tailscale** | Private Network | ~$25/mo | Tailscale hostname |
-| **+ Persistence** | Data survives restarts | existing subscription | DO Spaces |
+| Stage | What You Get | Access Method |
+|-------|--------------|---------------|
+| **1. CLI Only** | Gateway + CLI | `doctl apps console` |
+| **2. + Web UI + ngrok** | Control UI + Public URL | ngrok URL |
+| **3. + Tailscale** | Private Network | Tailscale hostname |
+| **+ Persistence** | Data survives restarts | DO Spaces |
 
 **Start simple, add features as needed.** Most users start with Stage 2 (ngrok) for the easiest setup.
 
@@ -63,7 +63,7 @@ git clone https://github.com/digitalocean-labs/moltbot-appplatform
 cd moltbot-appplatform
 
 # Edit app.yaml - set instance size for Stage 1
-# instance_size_slug: apps-s-1vcpu-1gb-fixed  # 1 CPU, 1GB (minimum for stable operation)
+# instance_size_slug: apps-s-1vcpu-2gb  # 1 CPU, 2GB (minimum for stable operation)
 
 # Set your SETUP_PASSWORD in app.yaml or DO dashboard
 
@@ -112,7 +112,7 @@ Add a public URL to access the Control UI. **Recommended for getting started.**
 Update `app.yaml`:
 
 ```yaml
-instance_size_slug: apps-s-1vcpu-1gb-fixed  # 1 CPU, 1GB
+instance_size_slug: apps-s-1vcpu-2gb  # 1 CPU, 2GB
 
 envs:
   - key: ENABLE_NGROK

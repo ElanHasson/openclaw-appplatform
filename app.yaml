@@ -10,7 +10,7 @@ workers:
       repository: bikramkgupta/clawdbot-appplatform
       tag: latest
     instance_count: 1
-    instance_size_slug: apps-s-1vcpu-1gb-fixed  # Minimum 1GB to avoid heap overflow
+    instance_size_slug: apps-s-1vcpu-2gb  # Minimum 2GB required - 1GB causes heap overflow
     envs:
       # ============================================================
       # REQUIRED
